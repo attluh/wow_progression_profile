@@ -1,0 +1,55 @@
+:root {
+    --main-text-color: #c6f8ff;
+    --light-gradient: #286ba2;
+    --dark-gradient: #31698a;
+    --contrast-bg-color: rgb(20, 20, 20);
+    --light-glass: rgba(0, 0, 0, 0.7);
+    --dark-glass: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    h1, h2, h3, p, .link a {
+        color:#c6f8ff;
+    }
+
+    main {
+        background-image: url("images/oribos_sky_dark.jpg");
+    }
+
+    .glass {
+        background: linear-gradient(
+            to right bottom,
+            var(--light-glass),
+            var(--dark-glass)
+        );
+    }
+
+    #dashboard {
+        background: linear-gradient(
+            to right bottom,
+            var(--light-glass),
+            var(--dark-glass)
+        );
+    }
+
+    .card {
+        background: linear-gradient(
+            to left top,
+            var(--light-glass),
+            var(--dark-glass)
+        );
+    }
+
+    .progress::after {
+        background: var(--contrast-bg-color);
+    }
+
+    img {
+        opacity: .80;
+        transition: opacity .5s ease-in-out;
+    }
+
+    img:hover {
+        opacity: 1;
+    }
+}
